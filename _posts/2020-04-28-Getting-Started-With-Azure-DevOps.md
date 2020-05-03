@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Azure DevOps
-tags: [DevOps agile, azure,tutorial]
+tags: [DevOps,  Azure DevOps, Tutorial, Git]
 categories: [Development, Tutorial]
 author: Haris Ahmad
 post-images-base-url: /assets/img/20200428-Getting-Started-With-Azure-DevOps
@@ -46,6 +46,7 @@ git add --all
 git commit -m "Initial Commit"
 git push
 ```
+
 * **git add -- all**: Stage all changes.
 * **git commit**: Commit the changes to the local repo. The **m** flag specifies the commit message. If you don't pass the **-m** flag, a default text editor will open up for you to provide the commit message.
 * **git push**: Push commits to the remote branch. You can also pass in the branch name like so: _git push origin &lt;feature branch&gt;_
@@ -88,6 +89,7 @@ Once the branch is created, go back to the Git command window on your machine an
 git pull
 git checkout <branch name>
 ```
+
 * **git pull**: Get the changes from the Azure DevOps to your machine, including the branch that was just created.
 * **git checkout &lt;branch name&gt;**: Switch to the new branch that was just created.
 
@@ -98,6 +100,7 @@ git add --all
 git commit -m "<your commit message>" 
 git push origin <feature branch>
 ```
+
 ## Update Local Copy With Remote Changes
 If you work in a team, you may have other team members contributing their changes to the repo on Azure DevOps. To ensure that you have the latest changes from others - run the following commands in the Git command window.
 
@@ -107,6 +110,7 @@ git pull origin master
 git checkout <feature-branch>
 git merge master
 ```
+
 * **git checkout master**: Switch to master branch.
 * **git pull origin master**: Get latest changes from Azure DevOps master branch.
 * **git checkout &lt;feature-branch&gt;**: Change the active branch back to <feature branch>
@@ -150,7 +154,7 @@ Once the **Complete/Set auto-complete** button is clicked - a popup opens. The u
 * Delete the source branch (&lt;feature branch&gt;).
 * Mark a work item as complete.
 
-![Complete pull request]({{ page.post-images-base-url }}/complete-pull-request.png)
+![Complete pull request]({{ page.post-images-base-url }}/merge-pull-request.png)
 
 Select **Complete merge** to merge the feature branch into master and complete the pull request. Repeat the steps defined in the Development flow to continue working on additional enhancements/bugs.
 
