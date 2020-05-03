@@ -16,19 +16,19 @@ Here's a quick guide to get you started with Azure Boards and Azure Repos (Git)
 # Getting Started
 Navigate to Azure DevOps Home located at `https://dev.azure.com/<organization>`, and create a **New Project**. Choose the work item process template that reflects your development methodology. You can find more about work item process templates [here](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops&tabs=basic-process).
 
-![new project]({{ page.images-base-url }}/newproject.jpg)
+![new project]({{ page.images-base-url }}/new-project.png)
 
 Next, navigate to **Boards** - > **Sprints** and define the dates for the current sprint by selecting **Set dates**.
 
-[iteration-dates.jpg]
+![Set Iteration Dates]({{ page.images-base-url }}/set-iteration-dates.png)
 
 The project is now configured.
 
 ## Configure Local Development Environment
 Next, navigate to **Repos** -> **Files** and hit the Clone button. There is a dropdown option to select your favorite IDE and clone to it.
 
-![clone-to-your-computer.jpeg]
-![clone-prompt-vs.jpeg]
+![Clone to your machine]({{ page.images-base-url }}/clone-to-your-computer.png)
+![Clone prompt in Visual Studio]({{ page.images-base-url }}/clone-prompt-vs.jpeg)
 
 Alternatively, open the [Git command window](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html) and execute the following command on your machine at the location where you would like to clone the repo.
 
@@ -37,7 +37,7 @@ git clone https://dev.azure.com/<organization>/<Project Name>/_git/
 ```
 Create a new project in Visual Studio at the location where the repo was cloned.
 
-![configure](configure-new-project.jpg)
+![Configure new project in Visual Studio]({{ page.images-base-url }}/configure-new-project.png)
 
 Once the project is created, it can be pushed to the Git repo on Azure DevOps. Run the following command in the Git command window to push your changes to the remote repo.
 
@@ -55,7 +55,7 @@ At this time your Git repo in Azure DevOps should be populated with the recent c
 ## Configure Branch Policies
 Navigate to **Repos** -> **Branches** on Azure DevOps and configure branch policies for the master branch. Branch policies are used to protect key branches(master branch in this case). Once a branch is protected, developers will need to create a pull request to merge their changes into a protected branch (more on this below). Now, let's set the branch policies.
 
-![Branches Home Page](branch-home.jpeg)
+![Branches Home Page]({{ page.images-base-url }}/branch-home.png)
 
 The branch policies must be met before the code can be merged into a protected branch. Some good to have policies are :
 
@@ -64,21 +64,21 @@ The branch policies must be met before the code can be merged into a protected b
 * _Check for comment resolution_. This policy will ensure that all code reviewer comments have been resolved before the code is merged into the branch.
 * _Build Validation_. Validate the code by pre-merging and building the pull request. The pull request cannot be completed until the code in the pull request builds successfully.
 
-![Branches Policies](branch-policies.jpeg)
+![Branches Policies]({{ page.images-base-url }}/branch-policies.png)
 
 # Development Workflow
 Navigate to **Boards** -> **Sprints** and create a new Product Backlog Item.
 
-![WorkItem Edit Screen](workitem-edit.jpeg)
+![WorkItem Edit Screen]({{ page.images-base-url }}/workitem-edit.png)
 
 The Work Item Create/Edit screen enables the user to link the work item to an existing commit, pull request, or branch. A new branch can also be created from this screen.
 
 Let's go ahead and create a new branch from the work item. Click on **create a branch** to get started.
 
-![Work Item Edit Screen - Add Development Link](workitem-link-to-branch.png)
+![Work Item Edit Screen - Add Development Link]({{ page.images-base-url }}/workitem-link-to-branch.png)
 
 This will open a new popup to create a branch.
-![Create a branch pop-up](create-a-branch.png)
+![Create a branch pop-up]({{ page.images-base-url }}/create-a-branch.png)
 
 The naming convention used for the branch name is Feature/&lt;work item id&gt;. You can follow a convention for the branch name that works best for your organization.
 
@@ -121,4 +121,43 @@ Go to **Repos** -> **Pull Requests** and create a new pull request. Azure DevOps
 
 Add Reviewers and link to any additional work items as necessary.
 
-![Create a branch pop-up](create-a-branch.png)
+![Create a branch pull-request]({{ page.images-base-url }}/create-pull-request.png)
+
+The reviewers can directly provide their feedback on the Pull Request.
+
+![Pull Request Options]({{ page.images-base-url }}/pull-request-options.png)
+
+![Pull Request Comments]({{ page.images-base-url }}/pull-request-comments.png)
+
+Based on the feedback from the code reviewer(s), you can go back to the development environment and implement suggested changes. Once you have completed the changes, run the following commands in the Git command window to push your changes to the remote branch, and update the pull request.
+
+```shell
+git add --all 
+git commit -m "<your commit message>" 
+git push origin <feature branch>
+```
+The latest changes are now available for the reviewer(s) to see. Once the reviewer(s) are satisfied with the changes, they can mark the comments as resolved and **Approve** the pull request.
+
+![Pull Request Review]({{ page.images-base-url }}/pull-request-review.png)
+
+After the pull request is approved, the owner of the pull request can either select **Complete** or **Set auto-complete** to complete the pull request and merge the code with the master branch. The difference between **Complete** and **Set auto-complete** is that **Complete** is only available when all policies have been met. Where-as **Set auto-Complete** can be configured beforehand and will complete the pull request as soon as all the configured policies are met.
+
+![Pull Request Complete Option]({{ page.images-base-url }}/complete-pull-request.png)
+
+Once the **Complete/Set auto-complete** button is clicked - a popup opens. The user has the option to:
+
+* Select the merge type for the Pull Request
+* Delete the source branch (&lt;feature branch&gt;).
+* Mark a work item as complete.
+
+![Complete pull request]({{ page.images-base-url }}/complete-pull-request.png)
+
+Select **Complete merge** to merge the feature branch into master and complete the pull request. Repeat the steps defined in the Development flow to continue working on additional enhancements/bugs.
+
+This completes the quick guide. Let me know how you run your Azure DevOps workflows.
+
+# Additional Material
+* [Create a new Git Repo in your Project](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops)
+* [Saving Changes with Git](https://www.atlassian.com/git/tutorials/saving-changes)
+* [Azure DevOps Branch Policies](https://docs.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops)
+* [Branching Strategy](https://docs.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance?view=azure-devops)
