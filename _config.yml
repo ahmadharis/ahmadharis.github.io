@@ -1,10 +1,10 @@
 # --- Basic options --- #
 
 # Name of website
-title: My website
+title: Haris Ahmad
 
 # Short description of your site
-description: Tips, Tricks and Fun
+description: Tips, Tricks and Ideas
 
 # Your name to show in the footer
 author: Haris Ahmad
@@ -12,10 +12,7 @@ author: Haris Ahmad
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+  About Me: "about"
   Author's home: "https://deanattali.com"
 
 # --- Logo --- #
@@ -100,13 +97,13 @@ footer-link-col: "#404040"
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "UA-165326517-1"
 
 # Fill in your Google Analytics ID to track your website using GA
 #google_analytics: ""
 
 # Google Tag Manager ID
-gtm: "UA-165326517-1"
+#gtm: ""
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
