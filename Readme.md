@@ -1,3 +1,7 @@
+---
+layout: base
+title: Home
+---
 # Heading
 Welcome
 1. Sample Item 1
