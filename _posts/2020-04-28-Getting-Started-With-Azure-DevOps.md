@@ -14,7 +14,7 @@ Here's a quick guide to get you started with Azure Boards and Azure Repos (Git)
 1. Have an Azure DevOps account.
 
 # Getting Started
-Navigate to Azure DevOps Home located at https://dev.azure.com/<organization>, and create a **New Project**. Choose the work item process template that reflects your development methodology. You can find more about work item process templates [here](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops&tabs=basic-process).
+Navigate to Azure DevOps Home located at `https://dev.azure.com/<organization>`, and create a **New Project**. Choose the work item process template that reflects your development methodology. You can find more about work item process templates [here](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops&tabs=basic-process).
 
 [new project]({{ page.images-base-url }}/newproject.jpg)
 
