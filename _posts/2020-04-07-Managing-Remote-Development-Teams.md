@@ -5,7 +5,6 @@ tags: [remote teams, management]
 categories: [Management]
 author: Haris Ahmad
 ---
-
 Over the past several years working remotely has been offered as an incentive by organizations all over the world. Working remotely can come with its own set of challenges. These challenges may multiply for team leads and managers when all members of the team are working remotely.
 
 During the current pandemic, most organizations had to enable work from home for the majority of their employees.  This leads to a question - How do you effectively manage a cross-functional development team remotely.
