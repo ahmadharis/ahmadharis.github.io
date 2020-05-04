@@ -10,7 +10,9 @@
   
   <meta content="Haris Ahmad, Haris, Ahmad, C#, .NET, Azure DevOps, Management, ASP.NET, Cloud, Azure, Productivity, Blog" name="keywords" />
 
-  {% if page.subtitle %}
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% elsif page.subtitle %}
   <meta name="description" content="{{ page.subtitle }}">
   {% endif %}
 
