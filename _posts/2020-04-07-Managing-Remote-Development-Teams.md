@@ -7,7 +7,8 @@ categories: [Management]
 author: Haris Ahmad
 post-images-base-url: /assets/img/20200407-Managing-Remote-Development-Teams
 cover-img: /assets/img/common/lego-emerald.png
-share-img: /assets/img/20200407-Managing-Remote-Development-Teams/outcome.jpeg
+image: /assets/img/common/lego-emerald.png
+share-img: https://ahmadharis.github.io/assets/img/20200407-Managing-Remote-Development-Teams/outcome.jpeg
 ---
 Over the past several years working remotely has been offered as an incentive by organizations all over the world. Working remotely can come with its own set of challenges. These challenges may multiply for team leads and managers when all members of the team are working remotely.
 
