@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Azure DevOps
-tags: [DevOps,  Azure DevOps, Tutorial, Git]
+tags: [Azure DevOps, Git]
 categories: [Development, Tutorial]
 author: Haris Ahmad
 post-images-base-url: /assets/img/20200428-Getting-Started-With-Azure-DevOps
