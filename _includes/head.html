@@ -4,84 +4,84 @@
 
   <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator | default: '-' }} {{ site.description }}{% elsif page.meta-title %}{{ page.meta-title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   
-{% if page.author %}   
+  {%- if page.author -%}   
   <meta name="author" content="{{ page.author }}"> 
-{% else %}   
+  {%- else -%}   
   <meta name="author" content="{{ site.author }}"> 
-{% endif %}
+  {%- endif -%}
   <meta name="keywords" content="Haris Ahmad, Haris, Ahmad, C#, .NET, Azure DevOps, Management, ASP.NET, Cloud, Azure, Productivity, Blog"  />
-{% if page.meta-description %}   
+  {%- if page.meta-description -%}   
   <meta name="description" content="{{ page.meta-description }}"> 
-{% elsif page.subtitle %}   
+  {%- elsif page.subtitle -%}   
   <meta name="description" content="{{ page.subtitle }}"> 
-{% endif %}
+  {%- endif -%}
   <!-- Facebook OpenGraph tags -->
   <meta property="og:site_name" content="{{site.title}}">
-{% if page.is-post %}   
+  {%- if page.is-post -%}   
   <meta property="og:type" content="article"> 
-{% else %}   
+  {%- else -%}   
   <meta property="og:type" content="website"> 
-{% endif %}
-{% if site.fb_app_id %}  
+  {%- endif -%}
+  {%- if site.fb_app_id -%}  
   <meta property="fb:app_id" content="{{ site.fb_app_id }}"> 
-{% endif %}
-{% if page.meta-title %}   
+  {%- endif -%}
+  {%- if page.meta-title -%}   
   <meta property="og:title" content="{{ page.meta-title }}"> 
-{% elsif page.title %}   
-<meta property="og:title" content="{{ page.title }}"> 
-{% elsif site.title %}   
-<meta property="og:title" content="{{ site.title }}"> 
-{% endif %}
-{% if page.meta-description %}   
+  {% elsif page.title %}   
+  <meta property="og:title" content="{{ page.title }}"> 
+  {%- elsif site.title -%}   
+  <meta property="og:title" content="{{ site.title }}"> 
+  {%- endif -%}
+  {%- if page.meta-description -%}   
   <meta property="og:description" content="{{ page.meta-description }}"> 
-{% elsif page.subtitle %}
+  {%- elsif page.subtitle -%}
   <meta property="og:description" content="{{ page.subtitle }}">
-{% else %}
+  {%- else -%}
   <meta property="og:description" content="{{ page.content | strip_html | xml_escape | truncatewords: 50 }}">
-{% endif %}
-{% if page.id %}
+  {%- endif -%}
+  {%- if page.id -%}
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-{% else %}
+  {%- else -%}
   <meta property="og:url" content="{{ page.url | absolute_url | strip_index }}">
   <link rel="canonical" href="{{ page.url | absolute_url | strip_index }}">
-{% endif %}
-{% if page.share-img %}
+  {%- endif -%}
+  {%- if page.share-img -%}
   <meta property="og:image" content="{{ page.share-img | absolute_url }}">
-{% elsif site.avatar %}
+  {%- elsif site.avatar -%}
   <meta property="og:image" content="{{ site.avatar | absolute_url }}">
-{% endif %}
-{% if page.is-post %}
+  {%- endif -%}
+  {%- if page.is-post -%}
   <meta property="article:author" content="https://linkedin.com/in/{{ site.social-network-links.linkedin }}" />
   <meta property="article:published_time" content="{{ page.published-date | date: "%Y-%m-%d" }}" /> 
-   {% if page.modified-time %}
+    {%- if page.modified-time -%}
   <meta property="article:modified_time" content="{{ page.modified-date | date: "%Y-%m-%d" }}" />
-  {% endif %}
-{% endif %}
+    {%- endif -%}
+  {%- endif -%}
 
   <!-- Twitter summary cards -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.social-network-links.twitter }}">
   <meta name="twitter:creator" content="@{{ site.social-network-links.twitter }}">
-{% if page.meta-title %}
+  {%- if page.meta-title -%}
   <meta name="twitter:title" content="{{ page.meta-title }}">
-{% elsif page.title %}
+  {%- elsif page.title -%}
   <meta name="twitter:title" content="{{ page.title }}">
-{% else %}
+  {%- else -%}
   <meta name="twitter:title" content="{{ site.title }}">
-{% endif %}
-{% if page.meta-description %}
+  {%- endif -%}
+  {%- if page.meta-description -%}
   <meta name="twitter:description" content="{{ page.meta-description }}">
-{% elsif page.subtitle %}
+  {%- elsif page.subtitle -%}
   <meta name="twitter:description" content="{{ page.subtitle }}">
-{% else %}
+  {%- else -%}
   <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncatewords: 50 }}">
-{% endif %}
-{% if page.share-img %}
+  {%- endif -%}
+  {%- if page.share-img -%}
   <meta name="twitter:image" content="{{ page.share-img }}">
-{% elsif site.avatar %}
+  {%- elsif site.avatar- %}
   <meta name="twitter:image" content="{{ site.avatar | absolute_url }}">
-{% endif %}
+  {%- endif -%}
 
    <!-- Robot -->
   <meta name="robots" content="index,follow">
@@ -92,29 +92,29 @@
   {% include gtm_head.html %}
   {% include google_analytics.html %}
 
-  {% if layout.common-ext-css %}
-    {% for css in layout.common-ext-css %}
-      {% include ext-css.html css=css %}
-    {% endfor %}
-  {% endif %}
+  {%- if layout.common-ext-css -%}
+    {%- for css in layout.common-ext-css -%}
+      {%- include ext-css.html css=css -%}
+    {%- endfor -%}
+  {%- endif -%}
 
-  {% if layout.common-css %}
-    {% for css in layout.common-css %}
+  {%- if layout.common-css -%}
+    {%- for css in layout.common-css -%}
   <link rel="stylesheet" href="{{ css | relative_url }}">
-    {% endfor %}
-  {% endif %}
+    {%- endfor -%}
+  {%- endif -%}
 
-  {% if page.ext-css %}
-    {% for css in page.ext-css %}
-      {% include ext-css.html css=css %}
-    {% endfor %}
-  {% endif %}
+  {%- if page.ext-css -%}
+    {%- for css in page.ext-css -%}
+      {%- include ext-css.html css=css -%}
+    {%- endfor -%}
+  {%- endif -%}
 
-  {% if page.css %}
-    {% for css in page.css %}
+  {%- if page.css -%}
+    {%- for css in page.css -%}
   <link rel="stylesheet" href="{{ css | relative_url }}">
-    {% endfor %}
-  {% endif %}
+    {%- endfor -%}
+  {%- endif -%}
 
   {% if site.matomo %}
   {% include matomo.html %}
