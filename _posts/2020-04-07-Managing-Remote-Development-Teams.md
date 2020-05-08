@@ -6,7 +6,7 @@ author: Haris Ahmad
 published-date: 2020-04-07
 categories: [Management]
 tags: [Remote Teams, Agile]
-cover-img: /assets/img/common/lego-emerald.png
+cover-img: /assets/img/common/lego-emerald-blur.png
 post-images-base-url: /assets/img/20200407-Managing-Remote-Development-Teams
 share-img: /assets/img/20200407-Managing-Remote-Development-Teams/outcome.jpeg
 ---
