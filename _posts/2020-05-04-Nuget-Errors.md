@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Azure DevOps Build Errors
-tags: [Development, C#, NuGet, Tips]
-categories: [Nuget]
+meta-description: The project is not compatible with monoandroid10.0. The nuget command failed with exit code(1) and error(System.AggregateException Error parsing solution file at Exception has been thrown by the target of an invocation.
 author: Haris Ahmad
-description: The project is not compatible with monoandroid10.0. The nuget command failed with exit code(1) and error(System.AggregateException Error parsing solution file at Exception has been thrown by the target of an invocation.
+published-date: 2020-05-04
+categories: [Nuget]
+tags: [Development, C#, NuGet, Tips]
 ---
 # Azure DevOps Build Errors
 

@@ -39,7 +39,7 @@
       
       {% if include.type == "post" %}
           <span class="post-meta">Posted on {{ page.date | date: date_format }}</span> by 
-          <a href="https://www.linkedin.com/in/harisahmad/" rel="author">{{site.author}}</a>
+          <a href="https://www.linkedin.com/in/{{ site.social-network-links.linkedin }}" rel="author">{{page.author}}</a>
           {% if page.readtime %}
             {% include readtime.html %}
           {% endif %}
@@ -68,7 +68,7 @@
       
       {% if include.type == "post" %}
           <span class="post-meta">Posted on {{ page.date | date: date_format }}</span> by 
-          <a href="https://www.linkedin.com/in/harisahmad/" rel="author">{{site.author}}</a>
+          <a href="https://www.linkedin.com/in/{{ site.social-network-links.linkedin }}/" rel="author">{{site.author}}</a>
           {% if page.readtime %}
             {% include readtime.html %}
           {% endif %}

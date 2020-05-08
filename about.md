@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Haris Ahmad
+title: About | Haris Ahmad
 subtitle: Consulting Director | MIcrosoft Practice Manager | Solution Architect
 ---
 

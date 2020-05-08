@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Effectively Managing Remote Development Teams
-description: Tips for effective management of remote development teams.
-tags: [Remote Teams, Management, Agile]
-categories: [Management]
+meta-description: Tips for effective management of remote development teams.
 author: Haris Ahmad
+published-date: 2020-04-07
+categories: [Management]
+tags: [Remote Teams, Agile]
+cover-img: /assets/img/common/lego-emerald.png
 post-images-base-url: /assets/img/20200407-Managing-Remote-Development-Teams
-share-img: https://ahmadharis.github.io/assets/img/20200407-Managing-Remote-Development-Teams/outcome.jpeg
+share-img: /assets/img/20200407-Managing-Remote-Development-Teams/outcome.jpeg
 ---
 Over the past several years working remotely has been offered as an incentive by organizations all over the world. Working remotely can come with its own set of challenges. These challenges may multiply for team leads and managers when all members of the team are working remotely.
 

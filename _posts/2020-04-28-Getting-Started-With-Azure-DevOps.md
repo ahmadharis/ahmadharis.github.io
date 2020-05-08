@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Getting Started with Azure DevOps
-tags: [Azure DevOps, Git]
-categories: [Development, Tutorial]
+meta-description: Quick guide to get started with Azure Boards and Repos
 author: Haris Ahmad
+published-date: 2020-04-28
+categories: [Development, Tutorial]
+tags: [Azure DevOps, Git]
 post-images-base-url: /assets/img/20200428-Getting-Started-With-Azure-DevOps
-description: Quick guide to get started with Azure Boards and Repos 
 ---
 Here's a quick guide to get you started with Azure Boards and Azure Repos (Git)
 
