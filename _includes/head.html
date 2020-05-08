@@ -4,13 +4,27 @@
 
   <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator | default: '-' }} {{ site.description }}{% elsif page.meta-title %}{{ page.meta-title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   
-{% if page.author %}   <meta name="author" content="{{ page.author }}"> {% else %}   <meta name="author" content="{{ site.author }}"> {% endif %}
+{% if page.author %}   
+  <meta name="author" content="{{ page.author }}"> 
+{% else %}   
+  <meta name="author" content="{{ site.author }}"> 
+{% endif %}
   <meta name="keywords" content="Haris Ahmad, Haris, Ahmad, C#, .NET, Azure DevOps, Management, ASP.NET, Cloud, Azure, Productivity, Blog"  />
-{% if page.meta-description %}   <meta name="description" content="{{ page.meta-description }}"> {% elsif page.subtitle %}   <meta name="description" content="{{ page.subtitle }}"> {% endif %}
+{% if page.meta-description %}   
+  <meta name="description" content="{{ page.meta-description }}"> 
+{% elsif page.subtitle %}   
+  <meta name="description" content="{{ page.subtitle }}"> 
+{% endif %}
   <!-- Facebook OpenGraph tags -->
   <meta property="og:site_name" content="{{site.title}}">
-{% if page.is-post %}   <meta property="og:type" content="article"> {% else %}   <meta property="og:type" content="website"> {% endif %}
-{% if site.fb_app_id %}  <meta property="fb:app_id" content="{{ site.fb_app_id }}"> {% endif %}
+{% if page.is-post %}   
+  <meta property="og:type" content="article"> 
+{% else %}   
+  <meta property="og:type" content="website"> 
+{% endif %}
+{% if site.fb_app_id %}  
+  <meta property="fb:app_id" content="{{ site.fb_app_id }}"> 
+{% endif %}
 {% if page.meta-title %}   
   <meta property="og:title" content="{{ page.meta-title }}"> 
 {% elsif page.title %}   
