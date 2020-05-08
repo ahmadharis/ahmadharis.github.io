@@ -7,8 +7,6 @@ published-date: 2020-05-04
 categories: [Nuget]
 tags: [Development, C#, NuGet, Tips]
 ---
-# Azure DevOps Build Errors
-
 This post addresses some of the build errors I came across on Azure Pipelines. 
 
 ## Incorrect NuGet Version
