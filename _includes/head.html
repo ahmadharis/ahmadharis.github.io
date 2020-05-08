@@ -48,10 +48,10 @@
   {%- endif -%}
   {% if page.share-img %}
   <meta property="og:image" content="{{ page.share-img | absolute_url }}">
-  {% elsif site.avatar %}
+  {%- elsif site.avatar -%}
   <meta property="og:image" content="{{ site.avatar | absolute_url }}">
   {% endif %}
-  {% if page.is-post %}
+  {%- if page.is-post -%}
   <meta property="article:author" content="https://linkedin.com/in/{{ site.social-network-links.linkedin }}" />
   <meta property="article:published_time" content="{{ page.published-date | date: "%Y-%m-%d" }}" /> 
     {% if page.modified-time %}
