@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About | Haris Ahmad
+title: About Me
+meta-title: Blog | Haris Ahmad
 subtitle: Consulting Director | MIcrosoft Practice Manager | Solution Architect
 ---
 
