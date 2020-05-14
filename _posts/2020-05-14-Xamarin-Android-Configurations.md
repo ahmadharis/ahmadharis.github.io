@@ -128,7 +128,7 @@ Create a class called **ConfigurationManager** and add the following code:
 
 ```cs
  
-  public class ConfigurationManager
+  public sealed class ConfigurationManager
     {
         /// <summary>
         /// holds a reference to the single created instance, if any.
@@ -141,7 +141,7 @@ Create a class called **ConfigurationManager** and add the following code:
         public static ConfigurationManager Instance { get; } = lazy.Value;
 
         public Configuration JSONConfiguration { get; set; }
-        public ConfigurationManager()
+        private ConfigurationManager()
         {
             JSONConfiguration = this.Read();
         }
@@ -170,8 +170,8 @@ Create a class called **ConfigurationManager** and add the following code:
 -----------
 Let's walk through the class.
 
-### Singleton Instance
-Create a singleton instance of the class. At any time there should only be a single version of ConfigurationManager available.
+### Singleton Class
+Create a singleton class. At any time there should only be a single version of ConfigurationManager available.
 ```cs
      private static readonly Lazy<ConfigurationManager> lazy = new Lazy<ConfigurationManager>(() => new ConfigurationManager());
 
