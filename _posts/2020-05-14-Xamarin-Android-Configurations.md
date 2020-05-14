@@ -148,7 +148,7 @@ Create a class called **ConfigurationManager** and add the following code:
          /// <summary>
         /// Read the configuration files and return Configuration Object
         /// </summary>
-        public Configuration Read()
+        private Configuration Read()
         {
             var assembly = Assembly.GetExecutingAssembly();
             string resourceName = "Service.Config.json";
