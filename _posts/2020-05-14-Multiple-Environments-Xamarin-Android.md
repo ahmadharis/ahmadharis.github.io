@@ -6,8 +6,7 @@ author: Haris Ahmad
 published-date: 2020-05-14
 categories: [Xamarin]
 tags: [Remote Teams, Agile]
-cover-img: /assets/img/common/lego-emerald-blur.png
-post-images-base-url: /assets/img/20200513-Multiple-Environments-Xamarin-Android
+post-images-base-url: /assets/img/20200514-Multiple-Environments-Xamarin-Android
 share-img: /assets/img/20200407-Managing-Remote-Development-Teams/outcome.jpeg
 ---
 Configuration files provide an easy and efficient way to manage environment based configurations separate from the code-base. Xamarin.Android does not natively provide a way to manage configurations for multiple environments.
@@ -34,8 +33,8 @@ You can use Build Configurations that best reflect your environment - or use the
 
 You can find more about Build Configurations and how to create them [here](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-and-edit-configurations?view=vs-2019).
 
-# Configure Andorid Manifest Files for your Environments
-Xamarin allows configuring  different Android Manifest files based on the Build Configuration.
+# Configure Android Manifest Files for your Environments
+Xamarin allows configuring different Android Manifest files based on the Build Configuration.
 * Start by creating AndroidManifest for all your environments. You can duplicate the existing AndroidManifest.xml and rename it for each environment in your solution. 
 
 * Edit your Android .csproj file
@@ -71,7 +70,7 @@ Here is how they appear in the solution:
 ![Android Manifest files in Visual Studio solution]({{ page.post-images-base-url }}/list-android-manifest.png)
 
 # Set up Environment Based Configuration.
-Create a folder called called **Configs** in .NET Standard 2.1 project. The benefit of using a .NET Standard project is that the same code can be reused between both Xamarin.Android and Xamarin.iOS. You can also create this folder directly in the Xamarin.Android project. I already have a project  **HA.Service** that targets .NET Standard 2.1, so I will use it to add the configuration files.
+Create a folder called **Configs** in .NET Standard 2.1 project. The benefit of using a .NET Standard project is that the same code can be reused between both Xamarin.Android and Xamarin.iOS. You can also create this folder directly in the Xamarin.Android project. I already have a project  **HA.Service** that targets .NET Standard 2.1, so I will use it to add the configuration files.
 
 Create config files in the following format, Config &lt;Build Configuration&gt;.json. I have created the following files based on the build configurations in my project.
 * ConfigDev.json
@@ -94,7 +93,7 @@ Create a Config.json file in the root of the project folder.
 
 ![Root config.json in Visual Studio Solution]({{ page.post-images-base-url }}/default-config.png)
 
-Go to  the properties of the file and change the build action to EmbeddedResource. The benefit of changing the build action to embedded resource is that the file will be embedded in the assembly. We will not have to figure out the path to the config file once the app is deployed.
+Go to the properties of the file and set the build action to **EmbeddedResource**. The benefit of changing the build action to an embedded resource is that the file will be embedded in the assembly. We will not have to figure out the path to the config file once the app is deployed.
 
 Learn more about [build actions](https://docs.microsoft.com/en-us/visualstudio/ide/build-actions?view=vs-2019).
 
@@ -166,7 +165,7 @@ Create a class called **ConfigurationManager** and add the following code:
 
 ```
 -----------
-Lets walk through the class.
+Let's walk through the class.
 
 ### Singleton Instance
 Create a singleton instance of the class. At any time there should only be a single version of ConfigurationManager available.
@@ -179,7 +178,6 @@ Create a singleton instance of the class. At any time there should only be a sin
         public static ConfigurationManager Instance { get; } = lazy.Value;
 ```
 
-
 ### Get Assembly
 Get the current assembly.
 ```cs
@@ -187,7 +185,7 @@ var assembly = Assembly.GetExecutingAssembly();
 ```
 
 ### Set Resource Name
-Set the Configuration File name. This is the configuration file that was embedded in the project. You will need to use the full resource name for this file. If the file exists in the root directory of your project, then the resource name would be  &lt;Project Namespace&gt;.&lt;filename&gt;
+Set the configuration resource name. This is the configuration file that was embedded in the project. You will need to use the full resource name for the file. If the file exists in the root directory of your project, then the resource name would be  &lt;Project Namespace&gt;.&lt;filename&gt;
 ```cs
  string resourceName = "HA.Service.Config.json";
 ```
@@ -204,7 +202,6 @@ Read the embedded resource and deserialize it using JSON.NET  to the **Configura
             var configs = JsonConvert.DeserializeObject<Configuration>(jsonFile);
 ```
 
-
 ### Sample Usage
 That is it. Now you can access the configuration Object like so:
 ```cs
@@ -213,9 +210,3 @@ That is it. Now you can access the configuration Object like so:
    var configuration = configs.JSONConfiguration
 ```
 ![Mobile app picking a configuration value]({{ page.post-images-base-url }}/mobile-app-configuration.png)
-
-Let me know if this helped you or what issues you came across!
-
-
-
-
