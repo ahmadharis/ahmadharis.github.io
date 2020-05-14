@@ -818,6 +818,7 @@ pre {
   border: none;
   background: none;
   margin: 0;
+  margin-bottom:15px;
 }
 .highlight > pre {
   background-image: linear-gradient(
@@ -921,3 +922,5 @@ pre {
   font-style: italic;
   font-size: 1rem;
 }
+
+

@@ -91,7 +91,7 @@ Here is the content for the configuration file I created earlier. You can add an
 }
 ```
 
-Create a Config.json file in the root of the project folder.
+Create a Config.json file in the root directory of the project folder.
 
 ![Root config.json in Visual Studio Solution]({{ page.post-images-base-url }}/default-config.png)
 
@@ -101,16 +101,17 @@ Learn more about [build actions](https://docs.microsoft.com/en-us/visualstudio/i
 
 ![Embeddable Resource]({{ page.post-images-base-url }}/config-build-action.png)
 
-Open up the .NET Standard csproj file and add the following code to copy the files from Configs/Config&lt;Build Configuration&gt;.json to the project root directory.
+Let's add a task in project to copy the configurations from Configs/Config&lt;Build Configuration&gt;.json to the project root directory.
+Open up the .NET Standard csproj file and add the following code to copy the files:
 
 ```xml
   <Target Name="CopyFiles" BeforeTargets="PrepareForBuild">
     <Copy SourceFiles="$(ProjectDir)\Configs\Config$(Configuration).json" DestinationFiles="$(ProjectDir)\Config.json" />
   </Target>
 ```
-Initially I created the Copy Files task with **BeforeTargets="Build"**. However, I  noticed that the project had to be cleaned and rebuilt multiple times for the application to pick up the correct configuration. Upon further research, I found that the PrepareForBuild was a better event to copy the configuration file to the destination. After switching to **BeforeTargets ="PrepareForBuild"**, the correct configuration file was available on every build.
+Initially I created the Copy Files task with **BeforeTargets="Build"**. However, I  noticed that the project had to be cleaned and rebuilt multiple times for the application to pick the correct configuration file. Upon further research, I found that the PrepareForBuild was a better event to copy the configuration file to the destination. After switching to **BeforeTargets ="PrepareForBuild"**, the correct configuration file was available on every build.
 
-With the basics all set now, all we need to do is add the code to read the configuration files.
+With the basics all set now, all we need to do is add the code to read the configuration file.
 
 Create a class in the .NET Standard 2.1 project that will be used to deserialize the configuration file. I will use the **Configuration** class defined below. You can add the properties that reflect your configuration structure.
 
@@ -181,7 +182,7 @@ Create a singleton instance of the class. At any time there should only be a sin
 ```
 
 ### Get Assembly
-Get the current assembly.
+Get the current assembly object.
 ```cs
 var assembly = Assembly.GetExecutingAssembly();
 ```
