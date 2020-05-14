@@ -7,7 +7,7 @@ published-date: 2020-05-14
 categories: [Xamarin]
 tags: [Xamarin, Android]
 post-images-base-url: /assets/img/20200514-Xamarin-Android-Configurations
-share-img: /assets/img/20200407-Managing-Remote-Development-Teams/outcome.jpeg
+share-img: /assets/img/common/mobile-development-01.png
 ---
 Configuration files provide an easy and efficient way to manage environment based settings and variables. Xamarin.Android does not natively provide a way to manage configurations for multiple environments.
 
@@ -205,7 +205,7 @@ Read the embedded resource and deserialize it using JSON.NET  to the **Configura
             var configs = JsonConvert.DeserializeObject<Configuration>(jsonFile);
 ```
 ### Sample Usage
-That is it. Now you can access the configuration Object like so:
+That is it. Now you can access the configuration object like so:
 ```cs
    ConfigurationManager configManager = ConfigurationManager.Instance;
          
