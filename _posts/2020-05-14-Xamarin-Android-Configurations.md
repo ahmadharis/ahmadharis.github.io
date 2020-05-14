@@ -209,6 +209,6 @@ That is it. Now you can access the configuration object like so:
 ```cs
    ConfigurationManager configManager = ConfigurationManager.Instance;
          
-   var configuration = configs.JSONConfiguration
+   var configuration = configManager.JSONConfiguration
 ```
 ![Mobile app picking a configuration value]({{ page.post-images-base-url }}/mobile-app-configuration.png)
