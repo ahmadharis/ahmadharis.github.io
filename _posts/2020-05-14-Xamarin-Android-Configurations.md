@@ -70,7 +70,9 @@ Here is how they appear in the solution:
 ![Android Manifest files in Visual Studio solution]({{ page.post-images-base-url }}/list-android-manifest.png)
 
 # Set up Environment Based Configuration.
-Create a folder called **Configs** in .NET Standard 2.1 project. The benefit of using a .NET Standard project is that the same code can be reused between both Xamarin.Android and Xamarin.iOS. You can also create this folder directly in the Xamarin.Android project. I already have a project  **HA.Service** that targets .NET Standard 2.1, so I will use it to add the configuration files.
+Create a folder called **Configs** in .NET Standard 2.1 project. The benefit of using a .NET Standard project is that the same code can be reused between both Xamarin.Android and Xamarin.iOS. 
+
+You can also create this folder directly in the Xamarin.Android project. I already have a project  **HA.Service** that targets .NET Standard 2.1, so I will use it to add the configuration files.
 
 Create config files in the following format, Config &lt;Build Configuration&gt;.json. I have created the following files based on the build configurations in my project.
 * ConfigDev.json
@@ -79,7 +81,7 @@ Create config files in the following format, Config &lt;Build Configuration&gt;.
 
 ![Configurations in the Visual Studio Solution]({{ page.post-images-base-url }}/configs.png)
 
-Here is the content for the JSON file I created earlier. You can add any configurations you would like to manage in the file:
+Here is the content for the configuration file I created earlier. You can add any configurations you would like to manage in the file:
 
 ```json
 {
