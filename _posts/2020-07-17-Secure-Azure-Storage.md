@@ -33,7 +33,7 @@ Here is how to create a Shared Access Signature key using Stored Access Policy.
 
 ![Stored Access Policy]({{ page.post-images-base-url }}/add-policy.png)
 * Now go back to the storage account, and select **Storage Explorer (preview)**. 
-* Select the Blob where the Shared Access Policy was applied. 
+* Select the Blob where the Stored Access Policy was applied. 
 * Right-click and Select **Get Shared Access Signature**.
 
 ![Get SAS ]({{ page.post-images-base-url }}/get-shared-access.png)
