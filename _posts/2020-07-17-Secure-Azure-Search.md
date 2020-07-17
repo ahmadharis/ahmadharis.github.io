@@ -7,7 +7,7 @@ published-date: 2020-07-17
 categories: [Azure]
 tags: [Azure, Azure Storage, Security]
 post-images-base-url: /assets/img/20200717-Secure-Azure-Search
-share-img: /assets/img/common/mobile-development-01.png
+share-img: /assets/img/common/cloud-networking-01.png
 ---
 
 Secure your Shared Access Signature (SAS) in Azure Storage  by using Stored Access Policy (SAP). A Stored Access Policy defines access rights and restrictions. This policy can then be used to create Shared Access Signatures that can be used by clients.
