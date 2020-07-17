@@ -18,6 +18,7 @@ Stored Access Policy is a much safer option. Without the use of Stored Access Po
 
 A better option would be to create a Stored Access Policy for each container and create Shared Access Signature based on the Stored Access Policy. If Shared Access Signature is ever compromised, the underlying Stored Access Policy can be deleted to keep the account safe.
 
+## Create Shared Access Signature based on Shared Access Policy
 Here is how to create a Shared Access Signature key using Shared Access Policy.
 * Go to portal.azure.com
 * Go to the storage account.
