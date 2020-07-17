@@ -6,7 +6,7 @@ author: Haris Ahmad
 published-date: 2020-07-17
 categories: [Azure]
 tags: [Azure, Azure Storage, Security]
-post-images-base-url: /assets/img/20200717-Secure-Azure-Search
+post-images-base-url: /assets/img/20200717-Secure-Azure-Storage
 share-img: /assets/img/common/cloud-networking-01.png
 ---
 
