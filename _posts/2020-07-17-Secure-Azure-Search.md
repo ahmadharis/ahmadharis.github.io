@@ -14,9 +14,9 @@ Secure your Shared Access Signature (SAS) in Azure Storage by using Stored Acces
 
 An inherent benefit of using Stored Access Policy is that the Shared Access Signature can be revoked anytime by deleting the underlying Stored Access Policy. Without using Stored Acess Policy, the user may not be able to revoke a given Shared Access Signature, which may have an impact on the security of the Azure Storage account.
 
-Stored Access Policy is a much safer option. Without the use of Stored Access Policy the only way to revoke the Shared Access Signature is to regenerate the account key. This may also have an adverse impact on existing applications that rely on Shared Access Signature tokens generated with these keys.
+Stored Access Policy is a much safer option. Without the use of Stored Access Policy, the only way to revoke the Shared Access Signature is to regenerate the account key. This may also have an adverse impact on existing applications that rely on Shared Access Signature tokens generated with the account keys.
 
-A better option would be to create a Stored Access Policy for each container and create Shared Access Signature based on the Stored Access Policy. If Shared Access Signature is ever compromised, you can delete the associated Stored Access Policy and keep the account safe.
+A better option would be to create a Stored Access Policy for each container and create Shared Access Signature based on the Stored Access Policy. If Shared Access Signature is ever compromised, the underlying Stored Access Policy can be deleted to keep the account safe.
 
 Here is how to create a Shared Access Signature key using Shared Access Policy.
 * Go to portal.azure.com
