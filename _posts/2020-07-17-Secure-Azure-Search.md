@@ -20,7 +20,7 @@ A better option would be to create a Stored Access Policy for each container and
 
 ## Create Shared Access Signature based on Shared Access Policy
 Here is how to create a Shared Access Signature key using Shared Access Policy.
-* Go to portal.azure.com
+* Go to Azure Portal (https://portal.azure.com)
 * Go to the storage account.
 * Go to the container where you want to apply this policy.
 * Select **Access Policy** from the menu.
