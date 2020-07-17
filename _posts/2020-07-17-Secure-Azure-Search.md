@@ -23,16 +23,20 @@ Here is how to create a Shared Access Signature key using Shared Access Policy.
 * Go to the storage account.
 * Go to the container where you want to apply this policy.
 * Select **Access Policy** from the menu.
+
 ![Access Policy]({{ page.post-images-base-url }}/access-policy.png)
+
 * Create a new Stored Access Policy. Be sure to set the expiration date, and the permissions based on the requirements. Limit the permissions to only the ones that you absolutely need.
 
 ![Add SAP]({{ page.post-images-base-url }}/add-sap.png)
 
 ![Stored Access Policy]({{ page.post-images-base-url }}/add-policy.png)
-* Now go back to the storage account, and select ** Storage Exporer Prevew. 
+* Now go back to the storage account, and select **Storage Exporer Prevew**. 
 * Select the Blob where the Shared Access Policy was applied. 
-* Right click and Select ** Get Shared Access Signature**.
+* Right click and Select **Get Shared Access Signature**.
+
 ![Get SAS ]({{ page.post-images-base-url }}/get-shared-access.png)
+
 * From the Access Policy dropdown select the Stored Access Policy configured earlier.
 * Select the Start time, Enstime and the permissions and create teh SAS.
 ![Create SAS]({{ page.post-images-base-url }}/create-sas.png)
