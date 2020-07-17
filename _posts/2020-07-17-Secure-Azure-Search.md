@@ -10,13 +10,13 @@ post-images-base-url: /assets/img/20200717-Secure-AzureSearch
 share-img: /assets/img/common/mobile-development-01.png
 ---
 
-Secure your Shared Access Signature(SAS) in Azure Storage  by using Stored Access Policy (SAP). A Stored Access Policy defines access rights and restrictions. This policy can then be used to create Shared Access Signatures that can be used by clients.
+Secure your Shared Access Signature (SAS) in Azure Storage  by using Stored Access Policy (SAP). A Stored Access Policy defines access rights and restrictions. This policy can then be used to create Shared Access Signatures that can be used by clients.
 
-An inherent benefit of using Stored Access Policy is that the Shared Access Signature can be revoked anytime by deleting the underlying Stored Access Policy. This is important, because there may be reasons to revoke the Shared Acess Signature. Without using Stored Acess Policy, the user may not be able to revoke a given Shared Access Signature, which may have an impact on the security of the Azure Storage.
+An inherent benefit of using Stored Access Policy is that the Shared Access Signature can be revoked anytime by deleting the underlying Stored Access Policy. Without using Stored Acess Policy, the user may not be able to revoke a given Shared Access Signature, which may have an impact on the security of the Azure Storage.
 
-Stored Access Policy is a much safer option then using Shared Access Keys  at the account level. If the Shared Access Keys at the account level are compromised, then the keys to the storage account may need to be regenerated to invalidate the SAS and keep the storage safe. This may also have an adverse impact on  existing applications that rely on SAS tokens generated with these keys.
+Stored Access Policy is a much safer option. If the Stored Access Policy was not used to generate the Shared Access Signature, then the only way to revoke the Shared Access Signature would be to regenerate the storage account key. This may also have an adverse impact on  existing applications that rely on Shared Access Signature tokens generated with these keys.
 
-A better option in this case would be to create Stored Access Policy for each container, and create SAS based on the SAP. If SAS key is ever compromised, you can delete the assocaited SAP and recreate a new one - and this will only impact the applications using the SAS for this particular container.
+A better option in this case would be to create Stored Access Policy for each container, and create Shared Access Signature based on the Stored Access Policy. If SAS is ever compromised, you can delete the assocaited SAP and keep the account safe.
 
 Here is how to create a Shared Access Signature key using Shared Access Policy.
 * Go to portal.azure.com
