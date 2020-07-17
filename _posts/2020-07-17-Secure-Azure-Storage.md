@@ -12,14 +12,14 @@ share-img: /assets/img/common/cloud-networking-01.png
 
 Secure your Shared Access Signature (SAS) in Azure Storage by using Stored Access Policy (SAP). A Stored Access Policy defines access rights and restrictions. This policy can then be used to create Shared Access Signatures that can be used by clients.
 
-An inherent benefit of using Stored Access Policy is that the Shared Access Signature can be revoked anytime by deleting the underlying Stored Access Policy. Without using Stored Acess Policy, the user may not be able to revoke a given Shared Access Signature, which may have an impact on the security of the Azure Storage account.
+An inherent benefit of using Stored Access Policy is that the Shared Access Signature can be revoked anytime by deleting the underlying Stored Access Policy. Without using Stored Access Policy, the user may not be able to revoke a given Shared Access Signature, which may have an impact on the security of the Azure Storage account.
 
 Stored Access Policy is a much safer option. Without the use of Stored Access Policy, the only way to revoke the Shared Access Signature is to regenerate the account key. This may also have an adverse impact on existing applications that rely on Shared Access Signature tokens generated with the account keys.
 
 A better option would be to create a Stored Access Policy for each container and create Shared Access Signature based on the Stored Access Policy. If Shared Access Signature is ever compromised, the underlying Stored Access Policy can be deleted to keep the account safe.
 
-## Create Shared Access Signature based on Shared Access Policy
-Here is how to create a Shared Access Signature key using Shared Access Policy.
+## Create Shared Access Signature based on Stored Access Policy
+Here is how to create a Shared Access Signature key using Stored Access Policy.
 * Go to [Azure Portal](https://portal.azure.com)
 * Go to the storage account.
 * Go to the container where you want to apply this policy.
