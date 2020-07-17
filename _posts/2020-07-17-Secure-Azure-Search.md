@@ -43,7 +43,7 @@ Here is how to create a Shared Access Signature key using Shared Access Policy.
 
 Keep the Shared Access Signature secure and use Azure Vault or other similar services, to limit the exposure even further.
 
-##Additional Material
+## Additional Material
 * [Shared Access Signature](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview)
 * [Stored Access Policy](https://docs.microsoft.com/en-us/rest/api/storageservices/define-stored-access-policy)
 * [Security Recommendations for Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/security-recommendations#:~:text=Microsoft%20recommends%20using%20Azure%20AD,saving%20them%20with%20your%20application)
