@@ -48,8 +48,8 @@
   {%- endif -%}
   {% if page.share-img %}
   <meta property="og:image" content="{{ page.share-img | absolute_url }}">
-  {% elsif site.avatar %}
-  <meta property="og:image" content="{{ site.avatar | absolute_url }}">
+  {% elsif site.global-share-img %}
+  <meta property="og:image" content="{{ site.global-share-img| absolute_url }}">
   {% endif %}
   {%- if page.is-post -%}
   <meta property="article:author" content="https://linkedin.com/in/{{ site.social-network-links.linkedin }}" />
