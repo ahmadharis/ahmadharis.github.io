@@ -10,14 +10,16 @@ post-images-base-url: /assets/img/20210419-Change-Env-Name
 share-img: /assets/img/common/cloud-networking-01.png
 ---
 
-Have you ever wondered how to change the environment name in the Power Platform. Follow the steps below to update the environment name. 
+Have you ever wondered how to change the environment name in the Power Platform? Follow the steps below to update the environment name. 
 
 * Log in to the Power Platform
 * Then go to the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/)
-* Select **Environments** from the left navigation ![Admin Menu]({{ page.post-images-base-url }}/env-menu.png)
+* Select **Environments** from the left navigation 
+![Admin Menu]({{ page.post-images-base-url }}/env-menu.png)
 * Click on the environment that you would like to modify. ![Environment List]({{ page.post-images-base-url }}/env-list.png)
 * Select **Edit** and change the name for the environment. 
 ![Environment Details]({{ page.post-images-base-url }}/env-detail.png)
+* Hit the **Save** Button.
 ![Change Details Screen]({{ page.post-images-base-url }}/env-change-details.png)
 
 It is really that simple!
