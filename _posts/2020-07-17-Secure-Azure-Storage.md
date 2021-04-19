@@ -48,6 +48,3 @@ Keep the Shared Access Signature secure and use Azure Vault or other similar ser
 * [Shared Access Signature](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview)
 * [Stored Access Policy](https://docs.microsoft.com/en-us/rest/api/storageservices/define-stored-access-policy)
 * [Security Recommendations for Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/security-recommendations)
-
-
-
