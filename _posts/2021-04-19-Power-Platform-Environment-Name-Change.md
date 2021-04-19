@@ -15,6 +15,7 @@ Have you ever wondered how to change the environment name in the Power Platform?
 * Log in to the Power Platform
 * Then go to the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/)
 * Select **Environments** from the left navigation 
+
 ![Admin Menu]({{ page.post-images-base-url }}/env-menu.png)
 * Click on the environment that you would like to modify. ![Environment List]({{ page.post-images-base-url }}/env-list.png)
 * Select **Edit** and change the name for the environment. 
