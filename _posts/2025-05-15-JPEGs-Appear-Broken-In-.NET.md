@@ -9,11 +9,9 @@ tags: [Microsoft, Azure, Dotnet, Tips]
 share-img: /assets/img/common/mobile-development-01.png
 ---
 
-# Summary
-
 Base64-encoded JPEG images generated in Java and other programming languages may appear broken when decoded in .NET. This may occur due to multiple reasons including ICC profile related issues or the colorspace used by the encoder. To ensure compatibility, images should either be converted to RGB before encoding in the source system or decoded in .NET using proper color management. In .NET Framework 4.8, embedded ICC profiles can be honored with Image.FromStream(stream, true, true), while in .NET Core 8 and later, libraries like Magick.NET provide consistent CMYK-to-RGB conversion during image loading.
 
-# The Problem: CMYK JPEGs in .NET Appear Broken
+# The Problem: Base64 encoded JPEGs in .NET May Appear Broken
 
 When .NET code attempts to decode a Base64 JPEG, an exception may be thrown or a broken <img> tag may appear in the browser. The issue is not related to Base64 formatting but stems from a color space incompatibility.
 
